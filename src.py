@@ -1,16 +1,16 @@
 import json
+import pandas as pd
 
 with open("tweets.json", encoding='utf-8') as file:
     data = json.load(file)
-    for x in data:
-        print('Name: ' + x['name'])
-        print('Username: ' + x['username'])
-        print('Description: ' + x['description'])
-        print('Location: ' + x['location'])
-        print('Followers: ' + str(x['followers']))
-        print('NumberStatuses: ' + str(x['numberstatuses']))
-        print('Time: ' + x['time'])
-        print('Tweets: ' + x['tweets'])
 
+for x in data:
+    freq = pd.Series((x['tweets']).split()).value_counts()[:20]
+    freq
+
+
+
+
+print(freq)
 
 
