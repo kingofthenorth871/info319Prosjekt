@@ -1,6 +1,7 @@
 
 import json
 import pandas as pd
+import codecs
 from collections import Counter
 
 
@@ -17,14 +18,16 @@ tweet_string = ''.join(tweet)
 
 #Counts word frequency for each tweet
 word_freq = []
-for x in tweet_string:
-    tokens = tweet_string.split(" ")
-    cnt = Counter(tokens)
-    freq = cnt.most_common()
-    word_freq.append(freq)
+tokens = tweet_string.split(" ")
+cnt = Counter(tokens)
+freq = cnt.most_common()
+word_freq.append(freq)
+
 
 print(word_freq)
-
+file_out = codecs.open("word_frq.txt", "w", "utf-8")
+file_out.write(str(word_freq))
+file_out.close()
 
 
 
