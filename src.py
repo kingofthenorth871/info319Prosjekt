@@ -3,9 +3,10 @@ import pandas as pd
 import codecs
 from collections import Counter
 
-
+#reads the file
 with open("tweets.json", encoding='utf-8') as file:
     data = json.load(file)
+
 #saves all the tweets in a list
 tweet = []
 for x in data:
@@ -23,7 +24,7 @@ freq = cnt.most_common()
 word_freq.append(freq)
 
 
-print(word_freq)
+
 file_out = codecs.open("word_frq.txt", "w", "utf-8")
 file_out.write(str(word_freq))
 file_out.close()
