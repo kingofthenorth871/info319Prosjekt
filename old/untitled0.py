@@ -5,7 +5,7 @@ Created on Mon Sep 23 12:28:46 2019
 @author: Tor Aasheim
 """
 import codecs
-# from collections import defaultdict
+from collections import defaultdict
 # from googletrans import Translator
 import re
 
