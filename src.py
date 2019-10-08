@@ -1,5 +1,4 @@
 import json
-import pandas as pd
 import codecs
 from collections import Counter
 
@@ -24,7 +23,7 @@ freq = cnt.most_common()
 word_freq.append(freq)
 
 
-
+#Writes to file
 file_out = codecs.open("word_frq.txt", "w", "utf-8")
 file_out.write(str(word_freq))
 file_out.close()
