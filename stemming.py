@@ -59,3 +59,7 @@ word_freq.append(freq)
 file_out = codecs.open("word_frq.txt", "w", "utf-8")
 file_out.write(str(word_freq))
 file_out.close()
+
+file_out = codecs.open("cloud.txt", "w", "utf-8")
+file_out.write(str(tweet_string3))
+file_out.close()
