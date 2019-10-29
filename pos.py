@@ -11,14 +11,14 @@ tweet = []
 for x in data:
     tweet.append(x)
 
-posTweet = []
-for x in tweet:
-    token = nltk.word_tokenize(str(x))
-    pos = nltk.pos_tag(token)
-    posTweet.append(pos)
+
+token = nltk.word_tokenize(data)
+pos = nltk.pos_tag(token)
+
+
 
 file_out = codecs.open("posTweet.txt", "w", "utf-8")
-file_out.write(str(posTweet))
+file_out.write(str(pos))
 file_out.close()
 
 
