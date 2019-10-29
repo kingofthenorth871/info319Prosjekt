@@ -30,6 +30,7 @@ stemTweet = []
 for w in words:
     stemTweet.append(ps.stem(w))
 
+
 # joines the stemmed words
 tweet_string2 = ' '.join(stemTweet)
 
@@ -61,5 +62,5 @@ file_out.write(str(word_freq))
 file_out.close()
 
 file_out = codecs.open("cloud.txt", "w", "utf-8")
-file_out.write(str(tweet_string3))
+file_out.write(str(tweet_string4))
 file_out.close()
