@@ -1,3 +1,6 @@
+import nltk
+nltk.download('averaged_perceptron_tagger')
+
 from pyspark import SparkConf, SparkContext
 import nltk
 import json
