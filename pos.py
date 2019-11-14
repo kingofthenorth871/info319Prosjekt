@@ -6,7 +6,7 @@ import nltk
 import json
 import codecs
 
-#sc = SparkContext(master="local", appName="SvmTest")
+sc = SparkContext(master="local", appName="SvmTest")
 with open("cloud.txt", encoding='utf-8') as file:
     data = file.read()
 

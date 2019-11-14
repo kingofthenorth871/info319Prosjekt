@@ -16,13 +16,18 @@ with open("tweets.json", encoding='utf-8') as file:
     data = json.load(file)
 # saves all the tweets in a list
 tweet = []
+comma = ","
 for x in data:
     tweet.append(x['tweets'])
+    tweet.append(comma)
 
 # creates a string to hold all the tweets for word count
 tweet_string = ''.join(tweet)
+
+
 # tokenizes the tweet string and saves them into the word variable
 words = word_tokenize(tweet_string)
+
 
 # stemming
 ps = PorterStemmer()
